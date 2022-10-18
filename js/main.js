@@ -14,3 +14,11 @@ fetch("http://localhost:8080/api/v1/user/getUser")
 }).then(json=>{
   console.log(json)
 })
+
+// axios third party javaScript library
+
+axios.get("http://localhost:8080/api/v1/user/getUser").then(response=>{
+  console.log(response.data)
+},err=>{
+  console.log(err)
+})
