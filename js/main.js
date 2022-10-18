@@ -22,3 +22,18 @@ axios.get("http://localhost:8080/api/v1/user/getUser").then(response=>{
 },err=>{
   console.log(err)
 })
+
+//using jQuery (ajax)
+
+$(document).ready(function () {
+  $.ajax({
+    url:"http://localhost:8080/api/v1/user/getUser",
+    type:"GET",
+    success:function (result){
+      console.log(result)
+    },
+    error:function (err){
+      console.log(err)
+    }
+  })
+})
